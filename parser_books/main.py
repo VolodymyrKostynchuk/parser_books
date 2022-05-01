@@ -17,7 +17,7 @@ def get_data(url, headers):
 
 	try:
 		os.remove('result_data\\csv_data.csv')
-	except Exception as ex:
+	except FileNotFoundError as ex:
 		print('file not found')
 
 	for page in range(0, count_books, 20):
